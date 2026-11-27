@@ -1,0 +1,446 @@
+{
+  "tests": [
+    {
+      "canonical_name": "Hemoglobin",
+      "loinc_code": "718-7",
+      "loinc_display": "Hemoglobin [Mass/volume] in Blood",
+      "category": "hematology",
+      "canonical_unit": "g/dL",
+      "plausible_low": 2.0,
+      "plausible_high": 24.0,
+      "aliases": ["Hemoglobin", "Haemoglobin", "Hgb", "Hb", "Hemoglobine", "HAEMOGLOBIN", "Hb.", "HGB", "HGB.", "Hemoglobin (Hb)"],
+      "unit_aliases": {"g dl": "g/dL", "g/l": "g/L"}
+    },
+    {
+      "canonical_name": "Fasting Glucose",
+      "loinc_code": "1558-6",
+      "loinc_display": "Glucose [Mass/volume] in Serum or Plasma --8 hours fasting",
+      "category": "chemistry",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 1.0,
+      "plausible_high": 40.0,
+      "aliases": ["Fasting Glucose", "Glucose", "Blood Glucose", "GLU", "Glu Fasting", "FBS", "Fasting Blood Sugar", "Fasting Blood Glucose", "Plasma Glucose Fasting", "Sugar Fasting"],
+      "unit_conversions": {
+        "mg/dl": {"factor": 0.0555, "target_unit": "mmol/L"}
+      }
+    },
+    {
+      "canonical_name": "White Blood Cells",
+      "loinc_code": "6690-2",
+      "loinc_display": "Leukocytes [#/volume] in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "10^3/uL",
+      "plausible_low": 0.1,
+      "plausible_high": 200.0,
+      "aliases": ["WBC", "White Blood Cells", "Leukocytes", "Leucocytes", "Total Leucocyte Count", "Total Leukocyte Count", "TLC", "WBCC", "W.B.C.", "WBC Count", "Total WBC Count"]
+    },
+    {
+      "canonical_name": "Red Blood Cells",
+      "loinc_code": "789-8",
+      "loinc_display": "Erythrocytes [#/volume] in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "10^6/uL",
+      "plausible_low": 0.5,
+      "plausible_high": 10.0,
+      "aliases": ["RBC", "Red Blood Cells", "Erythrocytes", "Total Red Blood Count", "TotalRedBloodCount", "RBC Count", "R.B.C.", "TRBC", "RBCs"]
+    },
+    {
+      "canonical_name": "Platelets",
+      "loinc_code": "777-3",
+      "loinc_display": "Platelets [#/volume] in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "10^3/uL",
+      "plausible_low": 1.0,
+      "plausible_high": 2000.0,
+      "aliases": ["Platelets", "PLT", "Platelet Count", "P.L.T.", "Thrombocytes", "Platelet"]
+    },
+    {
+      "canonical_name": "Neutrophils",
+      "loinc_code": "770-8",
+      "loinc_display": "Neutrophils/100 leukocytes in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 0.0,
+      "plausible_high": 100.0,
+      "aliases": ["Neutrophils", "Neutrophil", "Neutrophils %", "PMN", "Polymorphs", "Polymorphonuclear Cells", "Neut %"]
+    },
+    {
+      "canonical_name": "Lymphocytes",
+      "loinc_code": "736-9",
+      "loinc_display": "Lymphocytes/100 leukocytes in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 0.0,
+      "plausible_high": 100.0,
+      "aliases": ["Lymphocytes", "Lymphocyte", "Lymphocytes %", "Lymphs", "Lymph %"]
+    },
+    {
+      "canonical_name": "Monocytes",
+      "loinc_code": "5905-5",
+      "loinc_display": "Monocytes/100 leukocytes in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 0.0,
+      "plausible_high": 100.0,
+      "aliases": ["Monocytes", "Monocyte", "Monocytes %", "Mono", "Mono %"]
+    },
+    {
+      "canonical_name": "Eosinophils",
+      "loinc_code": "713-8",
+      "loinc_display": "Eosinophils/100 leukocytes in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 0.0,
+      "plausible_high": 100.0,
+      "aliases": ["Eosinophils", "Eosinophil", "Eosinophils %", "Eos", "Eos %"]
+    },
+    {
+      "canonical_name": "Basophils",
+      "loinc_code": "706-2",
+      "loinc_display": "Basophils/100 leukocytes in Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 0.0,
+      "plausible_high": 100.0,
+      "aliases": ["Basophils", "Basophil", "Basophils %", "Baso", "Baso %"]
+    },
+    {
+      "canonical_name": "Hematocrit",
+      "loinc_code": "4544-3",
+      "loinc_display": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "category": "hematology",
+      "canonical_unit": "%",
+      "plausible_low": 5.0,
+      "plausible_high": 80.0,
+      "aliases": ["Hematocrit", "Haematocrit", "HCT", "PCV", "HCV", "Packed Cell Volume", "Hct"]
+    },
+    {
+      "canonical_name": "Mean Corpuscular Hemoglobin Concentration",
+      "loinc_code": "786-4",
+      "loinc_display": "MCHC [Mass/volume] by Automated count",
+      "category": "hematology",
+      "canonical_unit": "g/dL",
+      "plausible_low": 20.0,
+      "plausible_high": 45.0,
+      "aliases": ["MCHC", "Mean Corpuscular Hemoglobin Concentration", "M.C.H.C."]
+    },
+    {
+      "canonical_name": "Mean Corpuscular Volume",
+      "loinc_code": "787-2",
+      "loinc_display": "MCV [Entitic volume] by Automated count",
+      "category": "hematology",
+      "canonical_unit": "fL",
+      "plausible_low": 30.0,
+      "plausible_high": 180.0,
+      "aliases": ["MCV", "Mean Corpuscular Volume", "M.C.V."]
+    },
+    {
+      "canonical_name": "Mean Corpuscular Hemoglobin",
+      "loinc_code": "785-6",
+      "loinc_display": "MCH [Entitic mass] by Automated count",
+      "category": "hematology",
+      "canonical_unit": "pg",
+      "plausible_low": 5.0,
+      "plausible_high": 60.0,
+      "aliases": ["MCH", "Mean Corpuscular Hemoglobin", "M.C.H."]
+    },
+    {
+      "canonical_name": "Sodium",
+      "loinc_code": "2951-2",
+      "loinc_display": "Sodium [Moles/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 90.0,
+      "plausible_high": 200.0,
+      "aliases": ["Sodium", "Na", "Serum Sodium", "Na+", "S. Sodium", "Sodium, Serum", "Serum Sodium ISE", "Sodium ISE indirect", "Sodium Serum ISE indirect"]
+    },
+    {
+      "canonical_name": "Potassium",
+      "loinc_code": "2823-3",
+      "loinc_display": "Potassium [Moles/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 1.0,
+      "plausible_high": 10.0,
+      "aliases": ["Potassium", "K", "Serum Potassium", "K+", "S. Potassium", "Potassium, Serum", "Serum Potassium ISE", "Potassium ISE indirect", "Potassium Serum ISE indirect"]
+    },
+    {
+      "canonical_name": "Chloride",
+      "loinc_code": "2075-0",
+      "loinc_display": "Chloride [Moles/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 50.0,
+      "plausible_high": 170.0,
+      "aliases": ["Chloride", "Cl", "Cl-", "Serum Chloride", "S. Chloride", "Chloride, Serum", "Serum Chloride ISE", "Chloride ISE indirect", "Chloride Serum ISE indirect"]
+    },
+    {
+      "canonical_name": "Creatinine",
+      "loinc_code": "2160-0",
+      "loinc_display": "Creatinine [Mass/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "umol/L",
+      "plausible_low": 5.0,
+      "plausible_high": 2500.0,
+      "aliases": ["Creatinine", "Creat", "Serum Creatinine", "S. Creatinine", "Creatinine Serum"],
+      "unit_conversions": {
+        "mg/dl": {"factor": 88.4, "target_unit": "umol/L"}
+      }
+    },
+    {
+      "canonical_name": "Urea",
+      "loinc_code": "3094-0",
+      "loinc_display": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "mg/dL",
+      "plausible_low": 1.0,
+      "plausible_high": 300.0,
+      "aliases": ["Urea", "BUN", "Blood Urea Nitrogen", "Blood Urea", "B. Urea", "Serum Urea", "Urea Nitrogen"]
+    },
+    {
+      "canonical_name": "Total Cholesterol",
+      "loinc_code": "2093-3",
+      "loinc_display": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "category": "lipids",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 1.0,
+      "plausible_high": 20.0,
+      "aliases": ["Cholesterol", "Total Cholesterol", "Chol", "T. Cholesterol", "Serum Cholesterol"],
+      "unit_conversions": {
+        "mg/dl": {"factor": 0.0259, "target_unit": "mmol/L"}
+      }
+    },
+    {
+      "canonical_name": "HDL Cholesterol",
+      "loinc_code": "2085-9",
+      "loinc_display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "category": "lipids",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 0.1,
+      "plausible_high": 5.0,
+      "aliases": ["HDL", "HDL Cholesterol", "HDL-C", "High Density Lipoprotein", "H.D.L."],
+      "unit_conversions": {
+        "mg/dl": {"factor": 0.0259, "target_unit": "mmol/L"}
+      }
+    },
+    {
+      "canonical_name": "LDL Cholesterol",
+      "loinc_code": "13457-7",
+      "loinc_display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
+      "category": "lipids",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 0.1,
+      "plausible_high": 15.0,
+      "aliases": ["LDL", "LDL Cholesterol", "LDL-C", "Low Density Lipoprotein", "L.D.L."],
+      "unit_conversions": {
+        "mg/dl": {"factor": 0.0259, "target_unit": "mmol/L"}
+      }
+    },
+    {
+      "canonical_name": "Triglycerides",
+      "loinc_code": "2571-8",
+      "loinc_display": "Triglyceride [Mass/volume] in Serum or Plasma",
+      "category": "lipids",
+      "canonical_unit": "mmol/L",
+      "plausible_low": 0.1,
+      "plausible_high": 30.0,
+      "aliases": ["Triglycerides", "Triglyceride", "TG", "TGL", "TGs", "Serum Triglycerides"],
+      "unit_conversions": {
+        "mg/dl": {"factor": 0.0113, "target_unit": "mmol/L"}
+      }
+    },
+    {
+      "canonical_name": "Alanine Aminotransferase",
+      "loinc_code": "1742-6",
+      "loinc_display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "U/L",
+      "plausible_low": 1.0,
+      "plausible_high": 5000.0,
+      "aliases": ["ALT", "SGPT", "ALT/SGPT", "Alanine Aminotransferase", "S.G.P.T.", "GPT", "Serum ALT"]
+    },
+    {
+      "canonical_name": "Aspartate Aminotransferase",
+      "loinc_code": "1920-8",
+      "loinc_display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "U/L",
+      "plausible_low": 1.0,
+      "plausible_high": 5000.0,
+      "aliases": ["AST", "SGOT", "AST/SGOT", "Aspartate Aminotransferase", "S.G.O.T.", "GOT", "Serum AST"]
+    },
+    {
+      "canonical_name": "Total Bilirubin",
+      "loinc_code": "1975-2",
+      "loinc_display": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "mg/dL",
+      "plausible_low": 0.0,
+      "plausible_high": 40.0,
+      "aliases": ["Total Bilirubin", "Bilirubin Total", "TBIL", "Bilirubin Total DPD", "T. Bilirubin", "Total Bili", "Serum Bilirubin Total", "Bilirubin, Total"],
+      "unit_conversions": {
+        "umol/l": {"factor": 0.0585, "target_unit": "mg/dL"}
+      }
+    },
+    {
+      "canonical_name": "Direct Bilirubin",
+      "loinc_code": "1968-7",
+      "loinc_display": "Bilirubin.direct [Mass/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "mg/dL",
+      "plausible_low": 0.0,
+      "plausible_high": 50.0,
+      "aliases": ["Direct Bilirubin", "Bilirubin Direct", "Bilirubin Direct DPD", "Conjugated Bilirubin", "D. Bilirubin", "D Bilirubin", "Direct Bili", "Bilirubin, Direct"]
+    },
+    {
+      "canonical_name": "Indirect Bilirubin",
+      "loinc_code": "1971-1",
+      "loinc_display": "Bilirubin.indirect [Mass/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "mg/dL",
+      "plausible_low": 0.0,
+      "plausible_high": 50.0,
+      "aliases": ["Indirect Bilirubin", "Bilirubin Indirect", "Bilirubin Indirect Calculated", "Unconjugated Bilirubin", "I. Bilirubin", "I Bilirubin", "Indirect Bili", "Bilirubin, Indirect"]
+    },
+    {
+      "canonical_name": "HbA1c",
+      "loinc_code": "4548-4",
+      "loinc_display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "category": "diabetes",
+      "canonical_unit": "%",
+      "plausible_low": 3.0,
+      "plausible_high": 20.0,
+      "aliases": ["HbA1c", "A1c", "Glycated Hemoglobin", "Glycosylated Hemoglobin", "Hemoglobin A1c", "HBA1C", "Hb A1c"]
+    },
+    {
+      "canonical_name": "TSH",
+      "loinc_code": "3016-3",
+      "loinc_display": "Thyrotropin [Units/volume] in Serum or Plasma",
+      "category": "endocrine",
+      "canonical_unit": "mIU/mL",
+      "plausible_low": 0.001,
+      "plausible_high": 200.0,
+      "aliases": ["TSH", "Thyroid Stimulating Hormone", "Thyrotropin", "S. TSH", "TSH Ultra", "TSH 3rd Generation"]
+    },
+    {
+      "canonical_name": "Alkaline Phosphatase",
+      "loinc_code": "6768-6",
+      "loinc_display": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "U/L",
+      "plausible_low": 1.0,
+      "plausible_high": 3000.0,
+      "aliases": ["Alkaline Phosphatase", "ALP", "Alkaline Phosphatase IFCC Amp", "A.L.P.", "Alk Phos", "Alk. Phos.", "Serum ALP"]
+    },
+    {
+      "canonical_name": "Gamma Glutamyl Transferase",
+      "loinc_code": "2324-2",
+      "loinc_display": "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma",
+      "category": "liver",
+      "canonical_unit": "U/L",
+      "plausible_low": 1.0,
+      "plausible_high": 3000.0,
+      "aliases": ["GGT", "GGT IFCC", "Gamma GT", "Gamma Glutamyl Transferase", "Gamma G.T.", "Gamma Glutamyl Transpeptidase", "G.G.T."]
+    },
+    {
+      "canonical_name": "Total Protein",
+      "loinc_code": "2885-2",
+      "loinc_display": "Protein [Mass/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "g/dL",
+      "plausible_low": 1.0,
+      "plausible_high": 15.0,
+      "aliases": ["Total Protein", "Total Protein Biuret", "Serum Total Protein", "T. Protein", "Protein Total", "Total Proteins"]
+    },
+    {
+      "canonical_name": "Albumin",
+      "loinc_code": "1751-7",
+      "loinc_display": "Albumin [Mass/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "g/dL",
+      "plausible_low": 0.5,
+      "plausible_high": 8.0,
+      "aliases": ["Albumin", "Serum Albumin", "Albumin BCP Bromocresol Green", "S. Albumin", "Alb"]
+    },
+    {
+      "canonical_name": "Globulin",
+      "loinc_code": "10834-0",
+      "loinc_display": "Globulin [Mass/volume] in Serum by calculation",
+      "category": "chemistry",
+      "canonical_unit": "g/dL",
+      "plausible_low": 0.5,
+      "plausible_high": 8.0,
+      "aliases": ["Globulin", "Globulin Calculated", "Serum Globulin", "S. Globulin"]
+    },
+    {
+      "canonical_name": "Albumin/Globulin Ratio",
+      "loinc_code": "1759-0",
+      "loinc_display": "Albumin/Globulin [Mass Ratio] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "ratio",
+      "plausible_low": 0.1,
+      "plausible_high": 5.0,
+      "aliases": ["A/G Ratio", "AG Ratio", "A G Ratio Calculated", "Albumin Globulin Ratio", "A G Ratio", "Alb/Glob Ratio", "A:G Ratio"]
+    },
+    {
+      "canonical_name": "Magnesium",
+      "loinc_code": "19123-9",
+      "loinc_display": "Magnesium [Mass/volume] in Serum or Plasma",
+      "category": "chemistry",
+      "canonical_unit": "mg/dL",
+      "plausible_low": 0.1,
+      "plausible_high": 10.0,
+      "aliases": ["Magnesium", "Serum Magnesium", "Magnesium Xylldyl", "Mg", "Mg++"]
+    },
+    {
+      "canonical_name": "Estimated Glomerular Filtration Rate",
+      "loinc_code": "33914-3",
+      "loinc_display": "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula",
+      "category": "chemistry",
+      "canonical_unit": "mL/min/1.73m2",
+      "plausible_low": 1.0,
+      "plausible_high": 300.0,
+      "aliases": ["eGFR", "Estimated GFR", "Estimated Glomerular Filtration Rate", "GFR Estimated", "e-GFR"]
+    },
+    {
+      "canonical_name": "Vitamin B12",
+      "loinc_code": "2132-9",
+      "loinc_display": "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma",
+      "category": "vitamins",
+      "canonical_unit": "pg/mL",
+      "plausible_low": 10.0,
+      "plausible_high": 5000.0,
+      "aliases": ["Vitamin B12", "Serum Vitamin B12", "SERUMVITAMINB12", "VitaminB12", "Vit B12", "B12", "Cobalamin"]
+    },
+    {
+      "canonical_name": "Vitamin D 25-Hydroxy",
+      "loinc_code": "62292-8",
+      "loinc_display": "25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma",
+      "category": "vitamins",
+      "canonical_unit": "ng/mL",
+      "plausible_low": 1.0,
+      "plausible_high": 200.0,
+      "aliases": ["Vitamin D 25 Hydroxy", "Vitamin D, 25-Hydroxy", "VITAMIND25HYDROXY", "VitaminD 25 Hydroxy", "VitaminD,25-Hydroxy", "25 OH Vitamin D", "25-OH-D", "25-OH Vitamin D", "25 Hydroxy Vitamin D", "25(OH)D", "Vit D", "Vitamin D Total"]
+    },
+    {
+      "canonical_name": "Prothrombin Time",
+      "loinc_code": "5902-2",
+      "loinc_display": "Prothrombin time (PT)",
+      "category": "coagulation",
+      "canonical_unit": "seconds",
+      "plausible_low": 5.0,
+      "plausible_high": 120.0,
+      "aliases": ["Prothrombin Time", "PT", "PT INR", "Test", "P.T.", "Protime"]
+    },
+    {
+      "canonical_name": "International Normalized Ratio",
+      "loinc_code": "6301-6",
+      "loinc_display": "INR in Platelet poor plasma by Coagulation assay",
+      "category": "coagulation",
+      "canonical_unit": "ratio",
+      "plausible_low": 0.1,
+      "plausible_high": 15.0,
+      "aliases": ["INR", "International Normalized Ratio", "I.N.R."]
+    }
+  ]
+}

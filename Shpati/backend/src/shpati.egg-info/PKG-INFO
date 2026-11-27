@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: shpati
+Version: 1.0.0
+Summary: Unified lab report digitizer combining Lerdi storage and TrustLab clinical safety.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn[standard]>=0.34.0
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: pydantic>=2.11.0
+Requires-Dist: opencv-python>=4.12.0
+Requires-Dist: numpy>=2.1.0
+Requires-Dist: orjson>=3.11.0
+Requires-Dist: rapidocr-onnxruntime<1.3,>=1.2.3
+Requires-Dist: pdf2image>=1.17.0
+Requires-Dist: Pillow>=11.0.0
+Requires-Dist: pytest>=8.0.0
+
+# Shpati — Unified Lab Report Digitizer
+
+Shpati combines the best engineering patterns from **Lerdi** (deterministic file storage, RapidOCR variant matrix, Vite API proxy) and **TrustLab** (10-stage pipeline, 3-tier clinical validation, human-in-the-loop review).
+
+## Architecture
+
+```
+Shpati/
+├── backend/          FastAPI + 10-stage async pipeline
+├── frontend/         React 19 + Vite 6 + Tailwind 4
+└── storage/          Local-first report folders by ID
+```
+
+| Layer | Source inspiration |
+|-------|-------------------|
+| `ReportStore` | Lerdi — one folder per report ID |
+| Pipeline `s1`–`s10` | TrustLab — single-responsibility stages |
+| OCR matrix | Lerdi — RapidOCR across OpenCV variants |
+| Validation | TrustLab — `accepted` / `needs_review` / `rejected` |
+| Review API | TrustLab — `/api/review/apply` provenance |
+| Dev proxy | Lerdi — `/api` and `/media` via Vite |
+
+## Quick start
+
+### Backend (port 8000)
+
+```bash
+cd Shpati
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+shpati-api
+```
+
+### Frontend (port 3000)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open **http://127.0.0.1:3000**
+
+## API highlights
+
+- `GET /api/health` — service status
+- `GET /api/reports` — dashboard telemetry
+- `POST /api/reports/upload` — ingest + run full pipeline
+- `GET /api/reports/{id}` — structured report + lineage JSON
+- `POST /api/review/session` — open human review session
+- `POST /api/review/apply` — approve / edit / reject rows
+- `POST /api/review/finalize` — rebuild FHIR from accepted rows
+
+## Storage layout
+
+Each upload is stored under `storage/uploaded_reports/` and processed into `storage/outputs/{report_id}/` with artifacts:
+
+`ocr.json`, `layout.json`, `structured.json`, `fhir.json`, `evaluation.json`
+
+## Tests
+
+```bash
+source .venv/bin/activate
+pytest backend/tests -q
+```

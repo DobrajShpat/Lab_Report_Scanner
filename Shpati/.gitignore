@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.DS_Store
+storage/uploaded_reports/*
+!storage/uploaded_reports/.gitkeep
+storage/outputs/*
+!storage/outputs/.gitkeep
+storage/reviews/*
+!storage/reviews/.gitkeep

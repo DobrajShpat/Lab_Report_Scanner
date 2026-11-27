@@ -1,0 +1,10 @@
+{
+  "users": {
+    "user_demo": {
+      "user_id": "user_demo",
+      "username": "demo",
+      "password_hash": "pbkdf2_sha256$ed81e92f63c2fc026ee01fe179b06d69$4cc4760f306c410e01ab165d3c6b487f994c8f26d3b34cfa16290aca79f83287",
+      "created_at": "2026-06-26T11:56:30.748203+00:00"
+    }
+  }
+}
